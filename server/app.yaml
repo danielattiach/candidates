@@ -1,0 +1,20 @@
+openapi: '3.0.0'
+
+info:
+  title: Candidate Service
+  description: Service to get data about candidates
+  version: '0.1'
+
+paths:
+  /candidates:
+    get:
+      summary: Get all candidates
+      x-openapi-router-controller: app.endpoints
+      operationId: get_candidates
+      responses:
+        200:
+          description: Candidates response
+          content:
+            application/json:
+              schema:
+                type: object
